@@ -1,9 +1,11 @@
+{% url "home" as url_home %}
+{% url "edit_page" as url_edit_page %}
 
     <ul class="nav nav-pills">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+            <a class="nav-link {% if url_home == request.path %}active{% endif %}" aria-current="page" href="{{url_home}}">Главная</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Создание/ред/удал</a>
+            <a class="nav-link {% if url_edit_page == request.path %}active{% endif %}" href="{{url_edit_page}}">Создание/ред/удал</a>
         </li>
     </ul>

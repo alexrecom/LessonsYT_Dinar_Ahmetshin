@@ -32,6 +32,11 @@ class HomeListView(ListView): ## Работает с моделью, "name" от
     template_name = "core/home.html"
     context_object_name = "name"
 
+class EditPage(ListView):  ## Работает с моделью, "name" отправляет в шаблон
+    model = Articles
+    template_name = "core/edit_page.html"
+    context_object_name = "name"
+
 class HomeDetailView(DetailView):
     model = Articles
     template_name = 'core/detail_page.html'

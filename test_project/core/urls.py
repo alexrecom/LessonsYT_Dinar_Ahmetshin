@@ -20,5 +20,6 @@ urlpatterns = [
     # path('', views.home, name='home'),
     # path('detail/<int:id>', views.detail_page, name='detail_page'),
     path('', views.HomeListView.as_view(), name='home'),
+    path('edit/', views.EditPage.as_view(), name='edit_page'),
     path('detail/<int:pk>', views.HomeDetailView.as_view(), name='detail_page'),
 ]
